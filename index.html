@@ -14,27 +14,42 @@
   <script>
     // <--!      const is = new is{}; -->
 
-    // const itsMe = {
-
-    //     // name : "kyj",
-    //   // age: 26,
-
-
-
-    // }; //자바스크립트
-    // itsMe = 1; //재활당
     const itsMe = {
-    };
-    itsMe.name = "kyj";
-    itsMe.age = 26;
-    itsMe.home = "oracle";
-    itsMe.hosil = "305호";
+
+      name: "kyj",
+      age : 26,
+      home : "oracle",
+      hosil : "305호",
+      test: `저는 ${this.name}입니다.`,
+      adult: function() {
+        if(itsMe.age >= 20){
+          console.log("나는 성인이야");
+        }
+
+        else
+        console.log("나는 성인이 아니야");
+      },
+
+    }; //자바스크립트
+    // itsMe = 1; //재활당
+    // const itsMe = {
+    // };
+    // itsMe.name = "kyj";
+    // itsMe.age = 26;
+    // itsMe.home = "oracle";
+    // itsMe.hosil = "305호"; // 동적 할당
 
     console.log(typeof (itsMe));
     console.log(itsMe.name);
     console.log(itsMe.age);
     console.log(itsMe.home);
-    console.log(itsMe.hosil); // 동적 할당
+    console.log(itsMe.hosil);
+    console.log(itsMe.test);
+    itsMe.adult();
+    itsMe.myName = function(){
+      console.log("저는" + this.name + "입니다");
+    }
+    itsMe.myName();
 
 
   </script>
